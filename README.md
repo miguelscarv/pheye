@@ -3,26 +3,26 @@
 - These models train a fraction of the number of parameters other models of similar sizes train
 - Are more efficient in how they incorporate vision into language tasks (dense cross-attention > LLaVA style architecture)
 - Are more efficient in how the process high resolution input images
-- Use less data to train (this is mainly a resource constraint problem I had, if you want to redo this recipe using more data results will be even better)
+- Use less data to train yet achieve competitive results (if you want to redo this recipe using more data results will be even better)
 
 ## Benchmarks
 
-| Model            | Resolution | Trainable Params | Data | VQAv2 | Nocaps | TextVQA | TextCaps |
-| ---------------- | ---------- | ---------------- | ---- | ----- | ------ | ------- | -------- |
-| MoE-LLaVA-1.6B×4 | 336        | 2.9B             | 5.9M | 76.0  | -      | 47.8    | -        |
-| MoE-LLaVA-2.7B×4 | 336        | 5.3B             | 5.9M | 77.1  | -      | 50.2    | -        |
-| moondream1       | 384        | 1.86B            | 3.9M | 74.7  | -      | 35.6    |
-| moondream2       | 384        | 1.86B            | -    | 77.7  | 92.2   | 49.7    | 124.7    |
-| Pheye-x4         | 448        | 295M             | 2.9M | 75.2  | 110.1  | 45.9    | 107.5    |
-| Pheye-x4         | 672        | 295M             | 2.9M | 75.5  | 110.5  | 49.3    | 112.8    |
-| Pheye-x2         | 448        | 578M             | 2.9M | 75.9  | 111.4  | 47.3    | 109.7    |
-| Pheye-x2         | 672        | 578M             | 2.9M | 76.4  | 110.0  | 50.5    | 116.1    |
+| Model                                                         | Resolution | Trainable Params | Data | VQAv2 | Nocaps | TextVQA | TextCaps |
+| ------------------------------------------------------------- | ---------- | ---------------- | ---- | ----- | ------ | ------- | -------- |
+| MoE-LLaVA-1.6B×4                                              | 336        | 2.9B             | 5.9M | 76.0  | -      | 47.8    | -        |
+| MoE-LLaVA-2.7B×4                                              | 336        | 5.3B             | 5.9M | 77.1  | -      | 50.2    | -        |
+| moondream1                                                    | 384        | 1.86B            | 3.9M | 74.7  | -      | 35.6    |
+| moondream2                                                    | 384        | 1.86B            | -    | 77.7  | 92.2   | 49.7    | 124.7    |
+| [Pheye-x4 🤗](https://huggingface.co/miguelcarv/Pheye-x4-448) | 448        | 295M             | 2.9M | 75.2  | 110.1  | 45.9    | 107.5    |
+| [Pheye-x4 🤗](https://huggingface.co/miguelcarv/Pheye-x4-672) | 672        | 295M             | 2.9M | 75.5  | 110.5  | 49.3    | 112.8    |
+| [Pheye-x2 🤗](https://huggingface.co/miguelcarv/Pheye-x2-448) | 448        | 578M             | 2.9M | 75.9  | 111.4  | 47.3    | 109.7    |
+| [Pheye-x2 🤗](https://huggingface.co/miguelcarv/Pheye-x2-672) | 672        | 578M             | 2.9M | 76.4  | 110.0  | 50.5    | 116.1    |
 
 ## Examples
 
 | Image                                                                                     | Example                                                                                                                                                                                                                                                                                                     |
 | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://c5.staticflickr.com/6/5463/17191308944_ae0b20bb7e_o.jpg"  width="300"/> | **How much does this popcorn packet weight?**<br>The popcorn packet weighs 90g.<br><br>**What flavour of popcorn is the center pack?**<br>The center pack of popcorn is flavored with butter.                                                                                                               |
+| <img src="https://c5.staticflickr.com/6/5463/17191308944_ae0b20bb7e_o.jpg"  width="300"/> | **How much does this popcorn packetet weight?**<br>The popcorn packet weighs 90g.<br><br>**What flavour of popcorn is the center pack?**<br>The center pack of popcorn is flavored with butter.                                                                                                             |
 | <img src="https://farm2.staticflickr.com/2708/5836100440_6e1117d36f_o.jpg"  width="300"/> | **Can I pet that dog?**<br>No, you cannot pet the dog in the image. The dog is a black bear, which is a wild animal and should not be approached or interacted with by humans. It is important to maintain a safe distance from wild animals to avoid any potential harm to both the animal and the person. |
 
 ## Usage
