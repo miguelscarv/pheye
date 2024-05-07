@@ -18,6 +18,13 @@
 | Pheye-x2         | 448        | 578M             | 2.9M | 75.9  | 111.4  | 47.3    | 109.7    |
 | Pheye-x2         | 672        | 578M             | 2.9M | 76.4  | 110.0  | 50.5    | 116.1    |
 
+## Examples
+
+| Image                                                                                     | Example                                                                                                                                                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://c5.staticflickr.com/6/5463/17191308944_ae0b20bb7e_o.jpg"  width="300"/> | **How much does this popcorn packet weight?**<br>The popcorn packet weighs 90g.<br><br>**What flavour of popcorn is the center pack?**<br>The center pack of popcorn is flavored with butter.                                                                                                               |
+| <img src="https://farm2.staticflickr.com/2708/5836100440_6e1117d36f_o.jpg"  width="300"/> | **Can I pet that dog?**<br>No, you cannot pet the dog in the image. The dog is a black bear, which is a wild animal and should not be approached or interacted with by humans. It is important to maintain a safe distance from wild animals to avoid any potential harm to both the animal and the person. |
+
 ## Usage
 
 To geenerate a sample response from a prompt use `generate.py`.
@@ -32,5 +39,5 @@ pip3 install -r requirements.txt
 Then run `generate.py`:
 
 ```bash
-python3 generate.py --image_path images/dog_flower.jpg --prompt "What is the dog holding in it's mouth?" --device <device>
+python3 generate.py --image_path images/dog_flower.jpg --prompt "What is the dog holding in it's mouth?" --device cuda
 ```

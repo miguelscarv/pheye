@@ -12,7 +12,7 @@ def get_args():
     parser.add_argument('--hf_model', type=str, default="miguelcarv/Pheye-x4-448")
     parser.add_argument('--image_path', type=str)
     parser.add_argument('--prompt', type=str)
-    parser.add_argument('--num_beams', type=int, default=3)
+    parser.add_argument('--num_beams', type=int, default=1)
     parser.add_argument('--max_new_tokens', type=int, default=50)
     parser.add_argument('--device', type=str, default="cpu")
 
@@ -78,7 +78,7 @@ if __name__ == "__main__":
                                     eos_token_id = tokenizer.eos_token_id,
                                     pad_token_id = tokenizer.pad_token_id,
                                     attention_mask=inputs.attention_mask.to(args.device))
-            answer = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].strip()
+            answer = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].split("Output:")[-1].lstrip()
 
         
         print(f"Instruction: {args.prompt}")
