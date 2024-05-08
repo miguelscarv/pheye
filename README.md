@@ -1,4 +1,4 @@
-# Pheye - a family of efficient small vision-language models
+# Φ Pheye - a family of efficient small vision-language models
 
 - These models train a fraction of the number of parameters other models of similar sizes train
 - Are more efficient in how they incorporate vision into language tasks (dense cross-attention > LLaVA style architecture)
@@ -20,17 +20,20 @@
 
 ## Examples
 
-| Image                                                                                     | Example                                                                                                                                                                                                                                                                                                     |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://c5.staticflickr.com/6/5463/17191308944_ae0b20bb7e_o.jpg"  width="500"/> | **How much does the popcorn pack weigh?**<br>The popcorn pack weighs 90g.<br><br>**What flavour of popcorn is the center pack?**<br>The center pack of popcorn is flavored with butter.                                                                                                                     |
-| <img src="https://farm2.staticflickr.com/2708/5836100440_6e1117d36f_o.jpg"  width="500"/> | **Can I pet that dog?**<br>No, you cannot pet the dog in the image. The dog is a black bear, which is a wild animal and should not be approached or interacted with by humans. It is important to maintain a safe distance from wild animals to avoid any potential harm to both the animal and the person. |
+| Image                                                                                      | Example                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <img src="https://c5.staticflickr.com/6/5463/17191308944_ae0b20bb7e_o.jpg"  width="500"/>  | **How much do these popcorn packets weight?**<br>These popcorn packets weigh 90g each.<br><br>**What brand are these popcorn packets?**<br>These popcorn packets are from the brand "Magic Pop".                                                                                                                                                                                                                                     |
+| <img src="https://farm2.staticflickr.com/2708/5836100440_6e1117d36f_o.jpg"  width="500"/>  | **Can I pet that dog?**<br>No, you cannot pet the dog in the image. The dog is a black bear, which is a wild animal and should not be approached or interacted with by humans. It is important to maintain a safe distance from wild animals to avoid any potential harm to both the animal and the person.                                                                                                                          |
+| <img src="https://farm4.staticflickr.com/3898/15152219465_4fb6d266ff_o.jpg"  width="500"/> | **Why is the person wearing protective gear?**<br>The person in the image is wearing protective gear, such as a beekeeper's suit and a helmet, because they are engaged in beekeeping. Beekeeping involves handling bees and their hives, which can be potentially dangerous due to the risk of bee stings. The protective gear helps to minimize the risk of bee stings and ensures the beekeeper's safety while working with bees. |
+|                                                                                            |
 
 ## Usage
 
-To geenerate a sample response from a prompt use `generate.py`.
-Start by creating a virtual environment and installing the necessary packages:
+To generate a sample response from a prompt use `generate.py`.
+Use a Python version >= 3.11. Start by cloning the repo and create a virtual environment with the necessary packages:
 
 ```bash
+git clone https://github.com/miguelscarv/pheye.git
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
@@ -41,3 +44,7 @@ Then run `generate.py`:
 ```bash
 python3 generate.py --image_path images/dog_flower.jpg --prompt "What is the dog holding in it's mouth?" --device cuda
 ```
+
+## Acknowledgments
+
+This implementation was inspired by [OpenFlamingo](https://github.com/mlfoundations/open_flamingo)'s repository.

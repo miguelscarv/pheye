@@ -2,7 +2,6 @@
 Based on: https://github.com/lucidrains/flamingo-pytorch
 """
 
-import torch
 from einops import rearrange
 from einops_exts import rearrange_many
 from torch import einsum, nn
@@ -57,8 +56,8 @@ class CrossAttention(nn.Module):
         self.to_kv = nn.Linear(dim_visual, inner_dim * 2, dtype=dtype)
         #self.to_kv_second = nn.Linear(dim_visual, inner_dim * 2)
         self.to_out = nn.Linear(inner_dim, dim_text, dtype=dtype)
-        self.g = []
-        self.l = []
+        #self.g = []
+        #self.l = []
 
     def forward(self, x, media):
         """
@@ -86,9 +85,9 @@ class CrossAttention(nn.Module):
         sim = einsum("... i d, ... j d -> ... i j", q, k)
 
         attn = sim.softmax(dim=-1)
-        idk = torch.mean(attn.squeeze()[:, 65:, :], (0, 1))
-        self.g.append(torch.sum(idk[:257]).item())
-        self.l.append(torch.sum(idk[257:]).item())
+        #idk = torch.mean(attn.squeeze()[:, 65:, :], (0, 1))
+        #self.g.append(torch.sum(idk[:257]).item())
+        #self.l.append(torch.sum(idk[257:]).item())
         
         out = einsum("... i j, ... j d -> ... i d", attn, v)
         out = rearrange(out, "b h n d -> b n (h d)")
