@@ -34,6 +34,7 @@ Use a Python version >= 3.11. Start by cloning the repo and create a virtual env
 
 ```bash
 git clone https://github.com/miguelscarv/pheye.git
+cd pheye
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
