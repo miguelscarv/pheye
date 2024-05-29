@@ -12,11 +12,11 @@
 | MoE-LLaVA-1.6B×4                                              | 336        | 2.9B             | 5.9M | 76.0  | -      | 47.8    | -        |
 | MoE-LLaVA-2.7B×4                                              | 336        | 5.3B             | 5.9M | 77.1  | -      | 50.2    | -        |
 | moondream1                                                    | 384        | 1.86B            | 3.9M | 74.7  | -      | 35.6    |
-| moondream2                                                    | 384        | 1.86B            | -    | 77.7  | 92.2   | 49.7    | 113.9    |
+| moondream2                                                    | 384        | 1.86B            | -    | 77.7  | 92.5   | 49.7    | 120.2    |
 | [Pheye-x4 🤗](https://huggingface.co/miguelcarv/Pheye-x4-448) | 448        | 295M             | 2.9M | 75.2  | 110.1  | 45.9    | 106.4    |
-| [Pheye-x4 🤗](https://huggingface.co/miguelcarv/Pheye-x4-672) | 672        | 295M             | 2.9M | 75.5  | 110.5  | 49.3    | 111.9    |
-| [Pheye-x2 🤗](https://huggingface.co/miguelcarv/Pheye-x2-448) | 448        | 578M             | 2.9M | 75.9  | 111.4  | 47.3    | 108.9    |
-| [Pheye-x2 🤗](https://huggingface.co/miguelcarv/Pheye-x2-672) | 672        | 578M             | 2.9M | 76.4  | 110.0  | 50.5    | 115.9    |
+| [Pheye-x4 🤗](https://huggingface.co/miguelcarv/Pheye-x4-672) | 672        | 295M             | 2.9M | 75.5  | 110.8  | 49.2    | 111.9    |
+| [Pheye-x2 🤗](https://huggingface.co/miguelcarv/Pheye-x2-448) | 448        | 578M             | 2.9M | 76.0  | 111.8  | 47.3    | 108.9    |
+| [Pheye-x2 🤗](https://huggingface.co/miguelcarv/Pheye-x2-672) | 672        | 578M             | 2.9M | 76.4  | 110.5  | 50.5    | 115.9    |
 
 ## Examples
 
