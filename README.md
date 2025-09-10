@@ -1,5 +1,7 @@
 # Φ Pheye - a family of efficient small vision-language models
 
+[![arXiv](https://img.shields.io/badge/arXiv-2501.02584-b31b1b.svg)](https://arxiv.org/abs/2501.02584)
+
 - These models train a fraction of the number of parameters other models of similar sizes train
 - Are more efficient in how they incorporate vision into language tasks (dense cross-attention > LLaVA style architecture)
 - Are more efficient in how the process high resolution input images
